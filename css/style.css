@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+body {
+  background: #3772ff;
+  color: #fff;
+  font-family: 'Montserrat', serif;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#quote-box {
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: .5;
+  height: 500px;
+  width: 99%;
+  margin: 2em auto;
+}
+
+.quote {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.source {
+  letter-spacing: 0.05em;
+  font-size: 1rem;
+  margin: 1em 0;
+  line-height: 1.1;
+  text-align: right;
+}
+
+.source:before {
+  content: "—";
+  margin: 0 .3em 0 0;
+}
+
+.quoteInfo {
+  text-align: right;
+  margin: .5em 8em 0 0;
+}
+
+.citation {
+  font-style: italic;
+  text-align: right;
+  margin: 0;
+}
+
+button {
+  font-family: 'Montserrat', serif;
+  font-size: 1em;
+}
+
+#loadQuote {
+  width: 12em;
+  margin: 2em 4em 0 4em;
+  border-radius: 4px;
+  background-color: #f2ff49;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  color: #3772ff;
+  padding: 15px 0;
+}
+#loadQuote:hover {
+  background-color: #fff;
+  color: #f038ff;
+  border-color: #f038ff;
+}
+#loadQuote:focus {
+  outline: none;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  #quote-box {
+    height: 350px;
+    width: 99%;
+  }
+}
+
+@media (min-width: 1025px) {
+  #quote-box {
+    height: 200px;
+    width: 90%;
+  }
+
+  .quote {
+    font-size: 4rem;
+  }
+
+  .source {
+    font-size: 1.25rem;
+    margin: 1em 8em .5em 0;
+  }
+
+  .citation {
+    margin: .5em 10em 0 0;
+  }
+}
