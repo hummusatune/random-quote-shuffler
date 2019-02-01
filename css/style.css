@@ -14,10 +14,9 @@ body {
   padding: 0;
 }
 
-#quote-box {
+#dynamic-box {
   display: flex;
   flex-flow: column nowrap;
-  line-height: .5;
   height: 500px;
   width: 99%;
   margin: 2em auto;
@@ -30,12 +29,17 @@ body {
   margin: 0;
 }
 
+.source-details {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 .source {
   letter-spacing: 0.05em;
   font-size: 1rem;
-  margin: 1em 0;
   line-height: 1.1;
   text-align: right;
+  margin: 2em 0 0 0;
 }
 
 .source:before {
@@ -43,15 +47,11 @@ body {
   margin: 0 .3em 0 0;
 }
 
-.quoteInfo {
-  text-align: right;
-  margin: .5em 8em 0 0;
-}
-
-.citation {
+.citation,
+.year {
   font-style: italic;
   text-align: right;
-  margin: 0;
+  margin: .5em 0 0 0;
 }
 
 button {
@@ -71,11 +71,13 @@ button {
   color: #3772ff;
   padding: 15px 0;
 }
+
 #loadQuote:hover {
   background-color: #fff;
   color: #f038ff;
   border-color: #f038ff;
 }
+
 #loadQuote:focus {
   outline: none;
 }
@@ -83,14 +85,14 @@ button {
 /* Media Queries */
 
 @media (min-width: 768px) {
-  #quote-box {
+  #dynamic-box {
     height: 350px;
     width: 99%;
   }
 }
 
 @media (min-width: 1025px) {
-  #quote-box {
+  #dynamic-box {
     height: 200px;
     width: 90%;
   }
@@ -101,7 +103,6 @@ button {
 
   .source {
     font-size: 1.25rem;
-    margin: 1em 8em .5em 0;
   }
 
   .citation {

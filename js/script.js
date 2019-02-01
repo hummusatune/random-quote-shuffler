@@ -65,6 +65,6 @@ function printQuote () {
 	var pickedQuote = getRandomQuote();
 	var quote = '<p class="quote">“' + pickedQuote.quote + '”</p>';
 	var name = '<p class="source">' + pickedQuote.name + '</p>';
-	var citation = '<p class="citation">' + pickedQuote.citation + '</p>';
-	return document.getElementById('quote-box').innerHTML = quote + name + citation;
+	var citation = '<span class="citation">' + pickedQuote.citation + '</span>';
+	return document.getElementById('dynamic-box').innerHTML = quote + name + citation;
 }
