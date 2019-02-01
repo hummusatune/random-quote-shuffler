@@ -19,7 +19,7 @@ body {
   flex-flow: column nowrap;
   height: 500px;
   width: 99%;
-  margin: 2em auto;
+  margin: 0 auto;
 }
 
 .quote {
@@ -51,7 +51,7 @@ body {
 .year {
   font-style: italic;
   text-align: right;
-  margin: .5em 0 0 0;
+  margin: .5em 3px 0 0;
 }
 
 button {
@@ -61,7 +61,7 @@ button {
 
 #loadQuote {
   width: 12em;
-  margin: 2em 4em 0 4em;
+  margin: 2em auto;
   border-radius: 4px;
   background-color: #f2ff49;
   border: 1px solid transparent;
@@ -103,9 +103,5 @@ button {
 
   .source {
     font-size: 1.25rem;
-  }
-
-  .citation {
-    margin: .5em 10em 0 0;
   }
 }
