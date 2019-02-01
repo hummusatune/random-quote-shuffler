@@ -21,8 +21,6 @@ var quotes = [
 	{
 		quote:"The eyes that glanced at me shone with a pale-green light.",
 		name:"H.G. Wells",
-		citation:"The Island of Doctor Moreau",
-		year:"1896"
 	},
 	{
 		quote:"Open your eyes and see what you can with them before they close forever.",
@@ -46,7 +44,6 @@ var quotes = [
 		quote:"No live organism can continue for long to exist sanely under conditions of absolute reality; even larks and katydids are supposed, by some, to dream.",
 		name:"Shirley Jackson",
 		citation:"The Haunting of Hill House",
-		year:"1959"
 	}
 ];
 
@@ -61,10 +58,23 @@ function getRandomQuote () {
 }
 
 // create a printQuote function that calls getRandomQuote and stores it in an object variable
+// run this through an if else if else statement that looks for specific values - e.g. citation and year
 function printQuote () {
 	var pickedQuote = getRandomQuote();
-	var quote = '<p class="quote">“' + pickedQuote.quote + '”</p>';
-	var name = '<p class="source">' + pickedQuote.name + '</p>';
-	var citation = '<span class="citation">' + pickedQuote.citation + '</span>';
-	return document.getElementById('dynamic-box').innerHTML = quote + name + citation;
+	if (pickedQuote.citation && pickedQuote.year) {
+		var quote = '<p class="quote">“' + pickedQuote.quote + '”</p>';
+		var name = '<p class="source">' + pickedQuote.name + '</p>';
+		var citation = '<span class="citation">' + pickedQuote.citation + '</span>';
+		var year = '<span class="year">' + pickedQuote.year + '</span>';
+		return document.getElementById('dynamic-box').innerHTML = quote + name + citation + year;
+	} else if (pickedQuote.citation) {
+		var quote = '<p class="quote">“' + pickedQuote.quote + '”</p>';
+		var name = '<p class="source">' + pickedQuote.name + '</p>';
+		var citation = '<span class="citation">' + pickedQuote.citation + '</span>';
+		return document.getElementById('dynamic-box').innerHTML = quote + name + citation;
+	} else {
+		var quote = '<p class="quote">“' + pickedQuote.quote + '”</p>';
+		var name = '<p class="source">' + pickedQuote.name + '</p>';
+		return document.getElementById('dynamic-box').innerHTML = quote + name;
+	}
 }
